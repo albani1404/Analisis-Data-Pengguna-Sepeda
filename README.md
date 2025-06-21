@@ -1,51 +1,57 @@
-🚴‍♂️ Analisis Data Pengguna Sepeda
-📌 Pertanyaan Bisnis
-Analisis ini dilakukan untuk menjawab tiga pertanyaan utama terkait perilaku pengguna penyewaan sepeda:
 
-⏰ Bagaimana pengaruh jam dalam sehari terhadap jumlah penyewaan sepeda?
+# 🚴‍♂️ Analisis Data Pengguna Sepeda
 
-🌤️ Apakah ada perbedaan jumlah penyewaan sepeda berdasarkan jenis cuaca (cerah, mendung, hujan, dsb)?
+## 📌 Tujuan dan Pertanyaan Bisnis
 
-👥 Apakah terdapat tren penggunaan sepeda yang berbeda antara pengguna musiman (casual) dan pengguna harian (registered)?
+Analisis ini bertujuan untuk menggali wawasan dari data penyewaan sepeda dan menjawab pertanyaan bisnis berikut:
 
-📊 Dataset
-Dataset yang digunakan berasal dari file day.csv dan hour.csv yang merekam data penyewaan sepeda secara harian dan per jam, lengkap dengan fitur-fitur seperti:
+1. ⏰ **Bagaimana pengaruh jam dalam sehari terhadap jumlah penyewaan sepeda?**
+2. 🌤️ **Apakah ada perbedaan jumlah penyewaan sepeda berdasarkan jenis cuaca (cerah, mendung, hujan, dsb)?**
+3. 👥 **Apakah terdapat tren penggunaan sepeda yang berbeda antara pengguna musiman (_casual_) dan pengguna harian (_registered_)?**
 
-Tanggal
+---
 
-Musim dan cuaca
+## 📂 Dataset
 
-Hari libur dan hari kerja
+📊 Dataset yang digunakan berasal dari file `day.csv` dan `hour.csv` yang berisi data penyewaan sepeda secara harian dan per jam. Fitur-fitur penting yang tersedia dalam dataset ini meliputi:
 
-Jumlah pengguna casual dan registered
+- 📅 Tanggal
+- 🌦️ Musim dan Cuaca
+- 🎌 Hari Libur dan Hari Kerja
+- 🧍‍♂️ Jumlah Pengguna Casual dan Registered
+- 🚲 Total Jumlah Penyewaan
 
-Total penyewaan sepeda
+---
 
-🔧 Tools dan Library
-Analisis dilakukan menggunakan bahasa Python dengan beberapa library berikut:
+## 🛠️ Tools dan Library
 
-pandas untuk manipulasi data
+Analisis dilakukan menggunakan bahasa pemrograman Python dengan bantuan library berikut:
 
-numpy untuk perhitungan numerik
+- `pandas` → manipulasi dan analisis data
+- `numpy` → operasi numerik
+- `matplotlib` dan `seaborn` → visualisasi data
 
-matplotlib dan seaborn untuk visualisasi
+---
 
-📈 Hasil Analisis
-1. ⏰ Pengaruh Jam dalam Sehari
-Data hour.csv menunjukkan pola dua puncak penyewaan pada pukul 07.00–09.00 dan 16.00–18.00.
+## 📈 Ringkasan Hasil Analisis
 
-Pola ini menunjukkan aktivitas perjalanan kerja, terutama pada hari kerja oleh pengguna registered.
+### ⏰ 1. Pengaruh Jam dalam Sehari terhadap Penyewaan
+- Terdapat **dua puncak penyewaan**: pagi (07.00–09.00) dan sore (16.00–18.00).
+- Didominasi oleh pengguna harian (_registered_), yang menggunakan sepeda sebagai transportasi ke/dari tempat kerja.
 
-2. 🌧️ Pengaruh Cuaca
-Pada cuaca cerah atau berawan ringan, jumlah penyewaan sepeda tinggi.
+### 🌧️ 2. Perbedaan Berdasarkan Cuaca
+- **Cuaca cerah atau berawan ringan** meningkatkan jumlah penyewaan.
+- **Cuaca ekstrem seperti hujan atau salju** menurunkan jumlah penyewaan secara signifikan, terutama dari pengguna casual.
 
-Saat hujan atau salju, penyewaan menurun drastis.
+### 👤 3. Perbedaan Tren Pengguna Casual vs Registered
+- **Casual** → Lebih aktif saat akhir pekan dan siang hari (rekreasi).
+- **Registered** → Konsisten sepanjang hari kerja dan jam sibuk (transportasi harian).
 
-Cuaca memiliki dampak langsung terhadap keputusan pengguna untuk menyewa sepeda, terutama pengguna casual.
+---
 
-3. 👤 Perbedaan Casual vs Registered
-Casual: Lebih banyak menyewa saat akhir pekan dan siang hari → Rekreasi.
+## 📌 Kesimpulan
 
-Registered: Dominan pada hari kerja dan jam sibuk → Transportasi rutin.
-
-Terdapat tren penggunaan yang berbeda yang dapat dimanfaatkan untuk strategi layanan atau pemasaran.
+🎯 Dengan memahami pola penggunaan berdasarkan waktu, cuaca, dan jenis pengguna, pihak pengelola dapat:
+- Mengatur distribusi sepeda dengan lebih efisien.
+- Menyesuaikan promosi atau layanan berdasarkan segmen pengguna.
+- Memprediksi kebutuhan sepeda secara lebih akurat sesuai kondisi eksternal.
